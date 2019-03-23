@@ -8,10 +8,10 @@ from mn_wifi.cli import CLI_wifi
 def topology():
 	net=Mininet_wifi(controller=Controller,accessPoint=OVSKernelAP)
 	info("***Creating nodes\n")
-	ap1=net.addAccessPoint('ap1',ssid='ssid−ap1',mode='g',channel='1',osition='10,30,0',range='20')
-	ap2=net.addAccessPoint('ap2',ssid='ssid−ap2',mode='g',channel='6',osition='50,30,0',range='20')
-	sta1=net.addStation('sta1',mac='00:00:00:00:00:01',ip='10.0.0.1/8',osition='10,20,0')
-	sta2=net.addStation('sta2',mac='00:00:00:00:00:02',ip='10.0.0.2/8',osition='50,20,0')
+	ap1=net.addAccessPoint('ap1',ssid='ssid−ap1',mode='g',channel='1',position='10,30,0',range='20')
+	ap2=net.addAccessPoint('ap2',ssid='ssid−ap2',mode='g',channel='6',position='50,30,0',range='20')
+	sta1=net.addStation('sta1',mac='00:00:00:00:00:01',ip='10.0.0.1/8',position='10,20,0')
+	sta2=net.addStation('sta2',mac='00:00:00:00:00:02',ip='10.0.0.2/8',position='50,20,0')
 	c1=net.addController('c1',controller=Controller)
 	info"***Configuring wifi nodes"
 	net.configureWifiNodes()
