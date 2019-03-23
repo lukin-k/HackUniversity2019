@@ -13,7 +13,7 @@ def topology():
 	sta1=net.addStation('sta1',mac='00:00:00:00:00:01',ip='10.0.0.1/8',position='10,20,0')
 	sta2=net.addStation('sta2',mac='00:00:00:00:00:02',ip='10.0.0.2/8',position='50,20,0')
 	c1=net.addController('c1',controller=Controller)
-	info"***Configuring wifi nodes"
+	info("***Configuring wifi nodes")
 	net.configureWifiNodes()
 	net.plotGraph(max_x=60,max_y=60)
 	info("***Enabling association control (AP)\n")
@@ -32,6 +32,6 @@ def topology():
 	info("***Stopping network\n")
 	net.stop()
 
-if__name__=='__main__':
+if __name__=='__main__':
 	setLogLevel('info')
 	topology()
